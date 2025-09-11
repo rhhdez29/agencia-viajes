@@ -200,6 +200,27 @@ header .logo h1{
     background-color: var(--blanco);
 }
 
+/*---------- LISTA CLIENTES PAGE -----------*/
+.clientes-main {
+    padding-top: 120px; /* Ajustar por el header fijo */
+    padding-bottom: 4rem;
+}
+
+.page-titulo {
+    color: var(--input-hover);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+#clientes-tabla-body .btn {
+    margin-right: 5px;
+}
+
+#clientes-tabla-body .btn svg {
+    vertical-align: text-bottom;
+    margin-right: 4px;
+}
+
 /*----------MEDIA-QUERIES-----------*/
 
 /* Para pantallas 'sm' (576px) en adelante, devolvemos un estilo más espaciado */
