@@ -42,7 +42,7 @@
                             <br>
                             Lista de clientes
                         </a>
-                        <a href="#">
+                        <a href="contacto.html">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left" viewBox="0 0 16 16">
                                 <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
                             </svg>
@@ -81,9 +81,9 @@
                                     <th scope="col">Nombre</th>
                                     <th scope="col">Email</th>
                                     <th scope="col">Destino</th>
-                                    <th scope="col">Personas</th>
-                                    <th scope="col">Fecha de Viaje</th>
-                                    <th scope="col">Comentarios</th>
+                                    <th scope="col">Número de Personas</th>
+                                    <th scope="col">Fecha</th>
+                                    <th scope="col">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody id="clientes-tabla-body">
@@ -98,6 +98,61 @@
             </div>
         </div>
     </main>
+
+    <!-- Modal de Edición -->
+    <div class="modal fade" id="editClientModal" tabindex="-1" aria-labelledby="editClientModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editClientModalLabel">Editar Cliente</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editForm" novalidate>
+                        <input type="hidden" id="edit-client-index">
+                        <div class="mb-3">
+                            <label for="edit-nombre" class="form-label">Nombre Completo</label>
+                            <input type="text" class="form-control" id="edit-nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="edit-email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-destino" class="form-label">Destino de Interés</label>
+                            <select class="form-select" id="edit-destino" required>
+                                <option value="" selected disabled>-- Selecciona un paquete --</option>
+                                <option value="Cancún All-Inclusive">Cancún All-Inclusive</option>
+                                <option value="Europa en 15 días">Europa en 15 días</option>
+                                <option value="Experiencia en Nueva York">Experiencia en Nueva York</option>
+                                <option value="Safari en África">Safari en África</option>
+                                <option value="Maravillas de Asia">Maravillas de Asia</option>
+                                <option value="Ruta por Sudamérica">Ruta por Sudamérica</option>
+                                <option value="Islas del Caribe">Islas del Caribe</option>
+                                <option value="Desierto de Dubái">Desierto de Dubái</option>
+                                <option value="Canadá y sus paisajes">Canadá y sus paisajes</option>
+                                <option value="Ruta Maya México">Ruta Maya México</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="edit-personas" class="form-label">Número de Personas</label>
+                                <input type="number" class="form-control" id="edit-personas" min="1" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="edit-fecha" class="form-label">Fecha Tentativa</label>
+                                <input type="date" class="form-control" id="edit-fecha" required>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer mt-auto py-3">
         <div class="container text-center">
