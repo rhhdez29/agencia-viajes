@@ -74,7 +74,6 @@ header .logo h1{
 
 
 #carousel{
-    margin: 125px 100px;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -225,6 +224,11 @@ header .logo h1{
 
 /* Para pantallas 'sm' (576px) en adelante, devolvemos un estilo más espaciado */
 @media (min-width: 576px) {
+
+    #carousel{
+        margin: 125px 100px;
+    }
+
     header nav a {
         flex-grow: 0; /* Evita que crezcan, usando su tamaño natural */
         padding: 8px 20px;
@@ -235,6 +239,10 @@ header .logo h1{
 }
 
 @media (max-width: 576px){
+
+    #carousel{
+        margin-top: 160px;
+    }
     
     .servicios-main{
         margin-top: 50px;
